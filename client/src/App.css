@@ -1,0 +1,117 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.image-logo{
+  width: 20%;
+  height: 20%;
+  margin: 20px auto;
+}
+
+.shopee-orange{
+    background-color: #ff4500;
+}
+
+.image{
+  width: 7%;
+  height: 7%;
+  margin: 20px auto;
+}
+
+.signin {
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+}
+
+.signInButton {
+  background-color: #f5c71a;
+  border-color: grey;
+}
+
+.signInButton:hover {
+  background-color: #ffe135;
+  border-color: grey;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 25rem;
+    font-size: 13px;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+
+.test{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.createAccount {
+  background-color: #e7e7e7;
+  color: black;
+  font-size: 14px;
+} /* Gray */
+
+.form-control:focus {
+  border-color: #FF0000;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.first-navbar li a{
+  color: white !important;
+  padding: 0px;
+  border-right: 1.5px solid rgba(0,0,0,0.2);
+}
+
+.second-navbar li a{
+  color: white !important;
+  padding: 0px;
+}
+
+.second-navbar .sign-up {
+  border-right: 1.5px solid rgba(255,255,255,0.5);
+}
+
+.sign-up, .login {
+    font-weight: bold;
+}
+
+.follow-us{
+  border-right: 0 !important;
+}
+
+nav .navbar-nav li a:hover{
+  color: rgba(0,0,0,0.9) !important;
+}
+
+nav .containers {
+  margin: 0 200px;
+  width: 100vw !important;
+}
+
+.search-bar{
+  display: block;
+  width: 70% !important;
+  height: 45px;
+  margin: 0 auto !important;
+}
+
+.shopeeImage{
+  width: 10%;
+  float: left;
+}
