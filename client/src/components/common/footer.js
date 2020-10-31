@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
-import './footer.css';
+import 'css/footer.css'
 import { Link, NavLink } from 'react-router-dom'
 
 function Footer() {
   return (
     <>
-      <footer class="page-footer font-small indigo">
-        <div class="footer-container text-center text-md-left">
-          <div class="row">
-            <div class="col-md-2 mx-auto">
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
-              <ul class="list-unstyled">
+        <div className="footer text-center text-md-left">
+          <div className="row">
+            <div className="col-md-2 mx-auto">
+              <h5 className="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
+              <ul className="list-unstyled">
                 <li><a href="#!">Help Centre</a></li>
                 <li><a href="#!">How To Buy</a></li>
                 <li><a href="#!">How To Sell</a></li>
@@ -23,9 +22,9 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="col-md-2 mx-auto">
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">ABOUT SHOPEE</h5>
-              <ul class="list-unstyled">
+            <div className="col-md-2 mx-auto">
+              <h5 className="font-weight-bold text-uppercase mt-3 mb-4">ABOUT SHOPEE</h5>
+              <ul className="list-unstyled">
                 <li><a href="#!">About Us</a></li>
                 <li><a href="#!">Shopee Careers</a></li>
                 <li><a href="#!">Shopee Policies</a></li>
@@ -39,9 +38,9 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="col-md-2 mx-auto">
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
-              <ul class="list-unstyled">
+            <div className="col-md-2 mx-auto">
+              <h5 className="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
+              <ul className="list-unstyled">
                 <li><a href="#!">Help Centre</a></li>
                 <li><a href="#!">How To Buy</a></li>
                 <li><a href="#!">How To Sell</a></li>
@@ -54,9 +53,9 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="col-md-2 mx-auto">
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
-              <ul class="list-unstyled">
+            <div className="col-md-2 mx-auto">
+              <h5 className="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
+              <ul className="list-unstyled">
                 <li><a href="#!">Help Centre</a></li>
                 <li><a href="#!">How To Buy</a></li>
                 <li><a href="#!">How To Sell</a></li>
@@ -69,9 +68,9 @@ function Footer() {
               </ul>
             </div>
 
-            <div class="col-md-3 mx-auto">
-              <h5 class="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
-              <ul class="list-unstyled">
+            <div className="col-md-3 mx-auto">
+              <h5 className="font-weight-bold text-uppercase mt-3 mb-4">CUSTOMER SERVICE</h5>
+              <ul className="list-unstyled">
                 <li><a href="#!">Help Centre</a></li>
                 <li><a href="#!">How To Buy</a></li>
                 <li><a href="#!">How To Sell</a></li>
@@ -86,12 +85,11 @@ function Footer() {
 
           </div>
 
-          <div class="footer-copyright text-center py-3">
+          <div className="footer-copyright text-center py-3">
             © 2020 Shopee. All Rights Reserved
           </div>
 
         </div>
-      </footer>
     </>
   )
 }

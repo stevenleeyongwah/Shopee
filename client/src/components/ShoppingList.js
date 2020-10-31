@@ -1,34 +1,70 @@
+// Import library
 import React, { Component } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import { getItems } from '../actions/itemActions'
-import Navbar from './Navbar'
-import { Link, NavLink } from 'react-router-dom'
+import 'css/shoppingList.css';
+
+// Import components
+import { getItems } from 'actions/itemActions'
+import Navbar from 'components/navbar/navbar'
 
 class ShoppingList extends Component {
-  constructor(props){
-    super(props);
-    this.state={name:'',picture:[]}
+  state={ name:'', items:[] }
 
-     axios.get(`/image/192b826b538b39197e1a942446f1f67a.jpg`)
-    .then(res=>{
-        let picture=res.data;
-      this.setState({picture:picture})
-    })
+  componentDidMount(prevProps){
+    axios.get("/imagess")
+         .then(res=>{
+             let items=res.data;
+             this.setState({items: items})
+          })
+
   }
 
-  // componentDidMount() {
-  //   // this.props.getItems()
-  //   this.state={name:'',picture:[]}
-  // }
+  handleClick = (e, item) => {
+    this.props.history.push(`/product/${item._id}`);
+  }
 
   render() {
-    return(
-        <div className='inside'>
+    function shortenText(text, length) {
+      if (text == null) {
+          return "";
+      }
+      if (text.length <= length) {
+          return text;
+      }
+      text = text.substring(0, length);
+      var last = text.lastIndexOf(" ");
+      text = text.substring(0, last);
+      return text + "...";
+    }
 
-          <img src={`data:image/jpg;base64,${this.state.picture.image}`}></img>
-        <br/>
+    return(
+      <>
+        <div className="cards">
+          {
+            this.state.items.map(item => (
+              <div className="card__single" onClick={((e) => this.handleClick(e, item))} key={item._id}>
+                <img className="card__image" src={`data:image/jpg;base64,${item.chunk}`} />
+                <div className="card__title">
+                  <p>
+                    {shortenText("FIBA Official basketball ball Size 6 Molten original GG6 Women's Basketball",50)}
+                  </p>
+                </div>
+                <div className="card__info">
+                  <div>
+                    <span className="card__price">$33.73</span>
+                  </div>
+                  <div>
+                    <a href="./" className="card__link">163 sold</a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
         </div>
+      </>
+
     )
   }
 }
@@ -41,32 +77,3 @@ export default connect(
   mapStateToProps,
   { getItems }
 )(ShoppingList)
-          // <img src=`data:image/jpg;base64,${}` alt="{{ image }}" />
-// items.map(({ _id, title, seller, price }, index) => (
-//   <>
-//     <div class="col-md-4">
-//       <input type="image" src="images/amazon.jpg" alt="Amazon" style={{ width: "40%", height: "40%" }}/>
-//       <NavLink to="/"><p>{ title }</p></NavLink>
-//       <span style={{ fontSize: "13px" }}>by {seller}</span>
-//       <p style={{ fontSize: "13px", color: "DarkRed", fontWeight: "bold" }}>{price}</p>
-//       <hr />
-//     </div>
-//   </>
-// ))
-
-// render() {
-//   const { items } = this.props.item
-//   console.log("items: ", items)
-//   return (
-//     <>
-//       <Navbar />
-//       <div class="container">
-//         <div class="row">
-//           {
-//             items
-//           }
-//         </div>
-//       </div>
-//     </>
-//   )
-// }

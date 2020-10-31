@@ -1,6 +1,14 @@
+// Import library
 import React, { Component } from 'react'
-import '../App.css';
 import { Link, NavLink } from 'react-router-dom'
+import { connect } from 'react-redux'
+
+// Import css
+import 'css/app.css';
+import 'css/navbar.css';
+
+// Import components
+import { logout } from 'actions/authActions';
 
 class Navbar extends Component {
   render() {
@@ -31,22 +39,34 @@ class Navbar extends Component {
               <li class="nav-item">
                 <a class="nav-link" href="#"><i class="far fa-question-circle mr-2"></i>Help</a>
               </li>
-              <li class="nav-item ml-3 sign-up">
-                <a class="nav-link" href="/signUp">Sign Up</a>
-              </li>
-              <li class="nav-item login">
-                <a class="nav-link follow-us" href="/login">Login</a>
-              </li>
+              {
+                this.props.isAuthenticated ?
+                  <>
+                    <li>
+                      <i class="fas fa-user-circle mr-2 text-light"></i>
+                      <span class="user-name">{this.props.user.name}</span>
+                    </li>
+                    <li class="nav-item ml-3" >
+                      <NavLink class="nav-link" onClick={this.props.logout} to="/">Log out</NavLink>
+                    </li>
+                  </>
+                  :
+                  <>
+                    <li class="nav-item ml-3 sign-up">
+                      <a class="nav-link" href="/signUp">Sign Up</a>
+                    </li>
+                    <li class="nav-item login">
+                      <a class="nav-link follow-us" href="/login">Login</a>
+                    </li>
+                  </>
+              }
             </ul>
-
           </div>
-
           <div class="mt-4">
             <img src="/images/shopee.jpg" alt="image" class="shopeeImage"/>
             <form class="">
               <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Search" aria-label="Search" />
             </form>
-
           </div>
         </div>
       </nav>
@@ -55,5 +75,14 @@ class Navbar extends Component {
 
 }
 
-export default Navbar
-//<i class="fas fa-shopping-cart"></i>
+const mapStateToProps = (state) => ({
+  isAuthenticated: state.auth.isAuthenticated,
+  user: state.auth.user
+})
+
+export default connect(
+  mapStateToProps,
+  { logout }
+)(Navbar)
+
+// {this.props.user.name}

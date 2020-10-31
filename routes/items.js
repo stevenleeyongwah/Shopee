@@ -3,6 +3,7 @@ const router = express.Router()
 const Item = require('../models/item')
 
 router.get('/', (req, res) => {
+  console.log("hi")
   Item.find()
       .sort({ date: -1 })
       .then(items => {
@@ -16,8 +17,8 @@ router.post('/', (req, res) => {
     seller: req.body.seller,
     price: req.body.price
   })
-
-  res.send("hi post")
+  console.log("hi")
+  res.json("hi post")
   // newItem.save().then(item => {
   //   res.json(item)
   // })

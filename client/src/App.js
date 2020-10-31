@@ -1,30 +1,43 @@
 // Import library
-import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css"
-import { Route, BrowserRouter } from 'react-router-dom'
-import './App.css';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux'
-import store from './store'
+import { Route, BrowserRouter } from 'react-router-dom'
+
+// Import css
+import "bootstrap/dist/css/bootstrap.min.css"
+import 'css/app.css';
 
 // Import components
-import Main from './components/Main'
-import Login from './components/authForm/Login'
-import SignUp from './components/authForm/SignUp'
-import ShoppingList from './components/ShoppingList'
+import Main from 'components/main'
+import Login from 'components/authForm/login'
+import SignUp from 'components/authForm/signUp'
+import ForgotPassword from 'components/authForm/forgotPassword'
+import ShoppingList from 'components/shoppingList'
+import Product from 'components/Product'
+import store from 'components/store/store'
+import { loadUser } from 'actions/authActions'
 
-function App() {
-  return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <div className="App">
-          <Route exact path='/' component={Main}/>
-          <Route exact path='/signUp' component={SignUp}/>
-          <Route exact path='/login' component={Login}/>
-          <Route exact path='/electronics' component={ShoppingList}/>
-        </div>
-      </BrowserRouter>
-    </Provider>
-  );
+class App extends Component {
+  componentDidMount(){
+    store.dispatch(loadUser())
+  }
+  render() {
+    return (
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className="App">
+            <Route exact path='/' component={Main}/>
+            <Route exact path='/signUp' component={SignUp}/>
+            <Route exact path='/login' component={Login}/>
+            <Route exact path='/forgotPassword' component={ForgotPassword}/>
+            <Route exact path='/shoppingList' component={ShoppingList}/>
+            <Route exact path='/product/:Id' component={Product}/>
+          </div>
+        </BrowserRouter>
+      </Provider>
+
+    );
+  }
 }
 
 export default App;
