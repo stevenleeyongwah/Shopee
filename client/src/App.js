@@ -13,7 +13,7 @@ import Login from 'components/authForm/login'
 import SignUp from 'components/authForm/signUp'
 import ForgotPassword from 'components/authForm/forgotPassword'
 import ShoppingList from 'components/shoppingList'
-import Product from 'components/Product'
+import Product from 'components/product'
 import store from 'components/store/store'
 import { loadUser } from 'actions/authActions'
 
