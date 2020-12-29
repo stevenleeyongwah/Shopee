@@ -26,7 +26,22 @@ class Product extends Component {
   render() {
     return(
       <>
-        <div className="containers">
+        
+      </>
+    )
+  }
+}
+
+const mapStateToProps = (state) => ({
+  item: state.item
+})
+
+export default connect(
+  mapStateToProps,
+  { getItems }
+)(Product)
+
+{/* <div className="containers">
           {
             this.state.item ?
             <>
@@ -57,18 +72,4 @@ class Product extends Component {
             : null
           }
 
-        </div>
-      </>
-
-    )
-  }
-}
-
-const mapStateToProps = (state) => ({
-  item: state.item
-})
-
-export default connect(
-  mapStateToProps,
-  { getItems }
-)(Product)
+        </div> */}
