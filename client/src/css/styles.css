@@ -4,9 +4,67 @@
   padding: 0;
 }
 
-body {
-  background-color: #ff4500;
-  font-family: Arial;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(-180deg, #f53d2d, #ff6633);
+  color: #fff;
+}
+.navbar .top-navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 2.125rem;
+}
+.navbar .top-navbar .top-left-navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar .top-navbar .top-left-navbar .seller-center, .navbar .top-navbar .top-left-navbar .sell-on-shopee, .navbar .top-navbar .top-left-navbar .download, .navbar .top-navbar .top-left-navbar .follow-us-on {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 300;
+  padding: 0 0.4375rem;
+  border-right: 2px solid rgba(255, 255, 255, 0.22);
+}
+.navbar .top-navbar .top-left-navbar .follow-us-on {
+  border: 0;
+}
+.navbar .top-navbar .top-left-navbar .logo i {
+  margin-right: 10px;
+}
+.navbar .top-navbar .top-navbar-spacer {
+  flex: 1;
+}
+.navbar .top-navbar .top-right-navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+.navbar .top-navbar .top-right-navbar ul li {
+  padding: 0 0.625rem;
+}
+.navbar .top-navbar .top-right-navbar ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8125rem;
+}
+.navbar .top-navbar .top-right-navbar ul li a i {
+  padding-right: 0.4rem;
+  font-size: 1rem;
+}
+.navbar .top-navbar .top-right-navbar ul li .user span {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=styles.css.map */

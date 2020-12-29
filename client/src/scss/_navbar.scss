@@ -6,7 +6,86 @@ $shopee-orange: #ff4500;
   padding: 0;
 }
 
-body {
-  background-color: $shopee-orange;
-  font-family: Arial;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(-180deg, rgb(245, 61, 45), rgb(255, 102, 51));
+  color: #fff;
+
+  .top-navbar {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2.125rem;
+
+    .top-left-navbar {
+      display: flex;
+      align-items: center;
+
+      .seller-center, .sell-on-shopee, .download, .follow-us-on {
+        color: #fff;
+        text-decoration: none;
+        font-size: .8125rem;
+        font-weight: 300;
+        padding: 0 .4375rem;
+        border-right: 2px solid hsla(0,0%,100%,.22);
+      }
+
+      .follow-us-on {
+        border: 0;
+      }
+
+      .logo {
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+    
+    .top-navbar-spacer {
+      flex: 1;
+    }
+    
+    .top-right-navbar {
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+        color: #fff;
+        text-decoration: none;
+
+        li {
+          padding: 0 .625rem;
+
+          a {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: .8125rem;
+
+            i {
+              padding-right: .4rem;
+              font-size: 1rem;
+            }
+          }
+
+          .user {
+            span {
+              font-size: 1rem;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom-navbar {
+    
+  }
 }
