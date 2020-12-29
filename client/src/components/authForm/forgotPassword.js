@@ -2,10 +2,6 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-// Import css
-import 'css/auth.css';
-import 'css/login.css';
-
 // Import components
 import Header from 'components/common/header'
 import Footer from 'components/common/footer'

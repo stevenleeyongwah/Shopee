@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import 'css/footer.css'
 import { Link, NavLink } from 'react-router-dom'
 
 function Footer() {

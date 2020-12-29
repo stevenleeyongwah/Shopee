@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux'
 import { Route, BrowserRouter } from 'react-router-dom'
 
-// Import css
-import "bootstrap/dist/css/bootstrap.min.css"
-import 'css/app.css';
-
 // Import components
 import Main from 'components/main'
 import Login from 'components/authForm/login'

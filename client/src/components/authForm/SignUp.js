@@ -4,10 +4,6 @@ import { Link, NavLink, useHistory } from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios'
 
-// Import css
-import 'css/auth.css';
-import 'css/signUp.css';
-
 // Import components
 import Header from 'components/common/header'
 import Footer from 'components/common/footer'

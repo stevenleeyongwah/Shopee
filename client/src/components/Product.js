@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import axios from 'axios'
 import { connect } from 'react-redux'
-import 'css/product.css';
 
 // Import components
 import { getItems } from 'actions/itemActions'

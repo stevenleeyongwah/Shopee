@@ -2,9 +2,6 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
-// Import css
-import 'css/header.css';
-
 function Header({ header }) {
   return (
     <>
