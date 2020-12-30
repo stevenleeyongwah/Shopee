@@ -14,18 +14,18 @@ $shopee-orange: #ff4500;
   background-image: linear-gradient(-180deg, rgb(245, 61, 45), rgb(255, 102, 51));
   color: #fff;
 
-  .top-navbar {
+  .top-navbar{
     display: flex;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     height: 2.125rem;
 
-    .top-left-navbar {
+    .top-left-navbar{
       display: flex;
       align-items: center;
 
-      .seller-center, .sell-on-shopee, .download, .follow-us-on {
+      .seller-center, .sell-on-shopee, .download, .follow-us-on{
         color: #fff;
         text-decoration: none;
         font-size: .8125rem;
@@ -34,23 +34,23 @@ $shopee-orange: #ff4500;
         border-right: 2px solid hsla(0,0%,100%,.22);
       }
 
-      .follow-us-on {
+      .follow-us-on{
         border: 0;
       }
 
-      .logo {
+      .logo{
         i {
           margin-right: 10px;
         }
       }
     }
     
-    .top-navbar-spacer {
+    .top-navbar-spacer{
       flex: 1;
     }
     
-    .top-right-navbar {
-      ul {
+    .top-right-navbar{
+      ul{
         display: flex;
         align-items: center;
         list-style: none;
@@ -58,24 +58,24 @@ $shopee-orange: #ff4500;
         color: #fff;
         text-decoration: none;
 
-        li {
+        li{
           padding: 0 .625rem;
 
-          a {
+          a{
             display: flex;
             align-items: center;
             color: #fff;
             text-decoration: none;
             font-size: .8125rem;
 
-            i {
+            i{
               padding-right: .4rem;
               font-size: 1rem;
             }
           }
 
-          .user {
-            span {
+          .user{
+            span{
               font-size: 1rem;
               font-weight: bold;
             }
@@ -85,7 +85,118 @@ $shopee-orange: #ff4500;
     }
   }
 
-  .bottom-navbar {
-    
+  .bottom-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.3125rem;
+    padding: 1rem 0 .625rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .bottom-left-navbar{
+      padding-right: 2.5rem;
+
+      .icon-shopee-logo{
+        fill: #fff;
+        width: 162px;
+        height: 50px;
+      }
+    }
+
+    .bottom-middle-navbar{
+      display: flex;
+      flex-direction: column;
+      width: 840px;
+
+      .search-bar{
+        display: flex;
+        justify-content: space-between;
+        height: 2.5rem;
+        padding: .1875rem;
+        border-radius: 2px;
+        background: #fff;
+        box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.12);
+
+        .search-bar-input{
+          display: flex;
+          flex: 1;
+
+          form{
+            display: flex;
+            flex: 1;
+            padding-left: .625rem;
+
+            input{
+              display: flex;
+              flex: 1;
+              outline: none;
+              border: none;
+            }
+          }
+        }
+
+        .search-bar-button{
+          background: #fb5533;
+          color: #fff;
+          height: 34px;
+          padding: 0 15px;
+          min-width: 60px;
+          max-width: 190px;
+          border-radius: 2px;
+          border: 0;
+          cursor: pointer;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+
+          svg{
+            fill: white;
+            width: 1em;
+            height: 1em;
+          }
+        }
+      }
+
+      .search-bar-items{
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        height: 0.875rem;
+        font-size: .75rem;
+        font-weight: 300;
+        line-height: .875rem;
+        overflow: hidden;
+
+        a:first-child {
+          margin-left: 0px;
+        }
+
+        a{
+          color: hsla(0,0%,100%,.9);
+          margin-left: 13px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .bottom-right-navbar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+
+      a{
+        cursor: pointer;
+        margin: 0 40px;
+
+        .shopping-cart-svg{
+          stroke: #fff;
+          fill: #fff;
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
   }
 }
