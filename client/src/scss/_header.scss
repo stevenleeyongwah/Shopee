@@ -1,6 +1,40 @@
-.image-logo{
-    width: 20%;
-    height: 20%;
-    margin: 20px auto;
+.header{
+    height: 5.25rem;
+    .header-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 75rem;
+        margin: 0 auto;
+        height: 100%;
+
+        .header-left{
+            display: flex;
+
+            .icon-shopee-logo{
+                height: 2.625rem;
+                margin-top: -.5rem;
+                padding: 0 1.125rem;
+                fill: #ee4d2d;
+            }
+
+            .header-text{
+                display: flex;
+                align-items: center;
+                
+                span {
+                    color: #222;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+
+        .header-right{
+            text-decoration: none;
+            color: #ee4d2d;
+            font-size: .875rem;
+            margin-right: .9375rem;
+            cursor: pointer;
+        }
+    }
 }
-  

@@ -1,5 +1,3 @@
-$shopee-orange: #ff4500;
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -80,6 +78,14 @@ $shopee-orange: #ff4500;
               font-weight: bold;
             }
           }
+        }
+
+        li:hover{
+          opacity: 0.8;
+        }
+
+        .sign-up{
+          border-right: 1px solid hsla(0,0%,100%,.4);
         }
       }
     }

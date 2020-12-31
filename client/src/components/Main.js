@@ -9,7 +9,6 @@ class Main extends Component {
       return (
           <>
               <Navbar />
-              <ShoppingList history={this.props.history} />
           </>
       )
     }

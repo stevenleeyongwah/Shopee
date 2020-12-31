@@ -34,24 +34,32 @@ class Navbar extends Component {
             {/* Top right navbar */}
             <div className="top-right-navbar">
               <ul>
+                {/* Notifications */}
                 <li className="">
                   <NavLink className="notifications" to="#">
                     <i className="far fa-bell"></i>
                     <span>Notifications</span>
                   </NavLink>
                 </li>
+                {/* Help */}
                 <li className="">
                   <NavLink className="help" to="#">
                     <i className="far fa-question-circle"></i>
                     <span>Help</span>
                   </NavLink>
                 </li>
+                <li className="sign-up">
+                  <NavLink className="" to="signUp">Sign Up</NavLink>
+                </li>
                 <li className="">
+                  <NavLink className="" to="">Login</NavLink>
+                </li>
+                {/* <li className="">
                   <NavLink className="user" to="#">
                     <i class="fas fa-user-circle text-light"></i>
                     <span>stevenleeyongwah96</span>
                   </NavLink>
-                </li>
+                </li> */}
               </ul>
             </div>
         </div>
