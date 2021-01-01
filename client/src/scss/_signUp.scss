@@ -30,6 +30,10 @@
           display: flex;
           align-items: center;
           padding: 1.375rem 1.875rem;
+
+          span{
+            font-size: 1.3rem;
+          }
         }
 
         .form-body{
@@ -37,17 +41,51 @@
           flex-direction: column;
           padding: 0 1.875rem 1.875rem;
 
-          .phone-number-input{
-            padding: .75rem;
-            margin-bottom: 1.875rem;
-            border: 1px solid rgba(0,0,0,.25);
-            border-radius: 2px;
-          }
+          .phone-number-section{
+            margin-bottom: .625rem;
 
-          .phone-number-input:focus{
-            outline: none !important; 
-            border: 1px solid rgba(0,0,0,.75);
-            border-radius: 2px;
+            .phone-number-input-box{
+              display: flex;
+              border: 1px solid rgba(0,0,0,.25);
+              border-radius: 3px;
+
+              input{
+                padding: .75rem;
+                outline: none;
+                border: none;
+                flex: 1;
+                background-color: #fff !important;
+              }
+              
+              .correct-green-tick{
+                display: none;
+                align-items: center;
+                padding: 0 .9375rem 0 .75rem;
+
+                svg{
+                  width: 1rem;
+                  height: 1rem;
+                }
+              }
+            }
+
+            .phone-number-input-box:focus-within{
+              border: 1px solid rgba(0,0,0,.75);
+            }
+
+            .phone-number-input-box-error{
+              overflow:hidden;
+              border: 1px solid #ee4d2d !important;
+              background-color: #fff6f7;
+            }
+
+            .phone-number-input-text-error{
+              margin: 0;
+              padding: .25rem 0 0;
+              font-size: .75rem;
+              color: #ff424f;
+              min-height: 1rem;
+            }     
           }
 
           .submit-form-button{
@@ -61,6 +99,10 @@
             height: 2.5rem;
             color: #fff;
             text-transform: uppercase;
+          }
+
+          .submit-form-button:hover{
+            opacity: 0.7 !important;
           }
 
           .seperator{
@@ -104,6 +146,14 @@
               }
             }
 
+            .apple-button, .google-button, .facebook-button{
+              padding: 0 .125rem;
+            }
+
+            .apple-logo, .google-logo, .facebook-logo{
+              background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/dee4c9b853f18a1ce0571f6600ad2c5d.png);
+            }
+
             .logo-wrapper{
               width: 2.25rem;
               height: 2.25rem;
@@ -111,13 +161,13 @@
               display: flex;
               justify-content: center;
               align-items: center;
+              margin-right: 1px;
             }
 
             .facebook-button{
               background-color: #1877f2;
 
               .facebook-logo{
-                background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/dee4c9b853f18a1ce0571f6600ad2c5d.png);
                 background-size: 372% 232%;
                 background-position: 76.47058823529412% 15.151515151515152%;
                 width: 1.375rem;
@@ -128,8 +178,15 @@
             .google-button{
               background-color: #4285f4;
 
+              .logo-wrapper{
+                background-color: #fff;
+              }
+              
               .google-logo{
-
+                background-size: 516.6666666666666% 322.22222222222223%;
+                background-position: 100% 100%;
+                width: 1.125rem;
+                height: 1.125rem;
               }
             }
 
@@ -137,7 +194,10 @@
               background-color: #000;
 
               .apple-logo{
-
+                background-size: 290.625% 181.25%;
+                background-position: 8.19672131147541% 19.23076923076923%;
+                width: 1.375rem;
+                height: 1.375rem;
               }
             }
 
@@ -184,11 +244,4 @@
       }
     }
   }
-}
-
-.input-error{
-  outline: none !important; 
-  border: 1px solid #ee4d2d !important;
-  background-color: rgb(255, 244, 242) !important;
-  border-radius: 2px !important;
 }

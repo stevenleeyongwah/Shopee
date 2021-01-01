@@ -241,21 +241,52 @@
   align-items: center;
   padding: 1.375rem 1.875rem;
 }
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-title span {
+  font-size: 1.3rem;
+}
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body {
   display: flex;
   flex-direction: column;
   padding: 0 1.875rem 1.875rem;
 }
-.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-input {
-  padding: 0.75rem;
-  margin-bottom: 1.875rem;
-  border: 1px solid rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section {
+  margin-bottom: 0.625rem;
 }
-.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-input:focus {
-  outline: none !important;
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box {
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box input {
+  padding: 0.75rem;
+  outline: none;
+  border: none;
+  flex: 1;
+  background-color: #fff !important;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box .correct-green-tick {
+  display: none;
+  align-items: center;
+  padding: 0 0.9375rem 0 0.75rem;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box .correct-green-tick svg {
+  width: 1rem;
+  height: 1rem;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box:focus-within {
   border: 1px solid rgba(0, 0, 0, 0.75);
-  border-radius: 2px;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-box-error {
+  overflow: hidden;
+  border: 1px solid #ee4d2d !important;
+  background-color: #fff6f7;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .phone-number-section .phone-number-input-text-error {
+  margin: 0;
+  padding: 0.25rem 0 0;
+  font-size: 0.75rem;
+  color: #ff424f;
+  min-height: 1rem;
 }
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .submit-form-button {
   background-color: #ee4d2d;
@@ -268,6 +299,9 @@
   height: 2.5rem;
   color: #fff;
   text-transform: uppercase;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .submit-form-button:hover {
+  opacity: 0.7 !important;
 }
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .seperator {
   display: flex;
@@ -306,6 +340,12 @@
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method button .button-text {
   margin-right: 0.625rem;
 }
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .apple-button, .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .google-button, .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .facebook-button {
+  padding: 0 0.125rem;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .apple-logo, .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .google-logo, .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .facebook-logo {
+  background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/dee4c9b853f18a1ce0571f6600ad2c5d.png);
+}
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .logo-wrapper {
   width: 2.25rem;
   height: 2.25rem;
@@ -313,12 +353,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 1px;
 }
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .facebook-button {
   background-color: #1877f2;
 }
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .facebook-button .facebook-logo {
-  background-image: url(https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/dee4c9b853f18a1ce0571f6600ad2c5d.png);
   background-size: 372% 232%;
   background-position: 76.4705882353% 15.1515151515%;
   width: 1.375rem;
@@ -327,8 +367,23 @@
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .google-button {
   background-color: #4285f4;
 }
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .google-button .logo-wrapper {
+  background-color: #fff;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .google-button .google-logo {
+  background-size: 516.6666666667% 322.2222222222%;
+  background-position: 100% 100%;
+  width: 1.125rem;
+  height: 1.125rem;
+}
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .apple-button {
   background-color: #000;
+}
+.sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .apple-button .apple-logo {
+  background-size: 290.625% 181.25%;
+  background-position: 8.1967213115% 19.2307692308%;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 .sign-up-page .sign-up-body .image-body .form-wrapper .form-body .others-sign-up-method .logo {
   width: 2.25rem;
@@ -362,13 +417,6 @@
   font-size: 0.875rem;
   font-weight: bold;
   text-decoration: none;
-}
-
-.input-error {
-  outline: none !important;
-  border: 1px solid #ee4d2d !important;
-  background-color: #fff4f2 !important;
-  border-radius: 2px !important;
 }
 
 /*# sourceMappingURL=styles.css.map */
